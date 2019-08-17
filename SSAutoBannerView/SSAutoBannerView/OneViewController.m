@@ -34,7 +34,7 @@
     self.bannerView = [[SSAutoBannerView alloc]init];
     [self.view addSubview:self.bannerView];
     self.bannerView.frame = CGRectMake(0, 64, self.view.bounds.size.width, 100);
-    self.bannerView.dataArray = @[@"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg", @"5.jpg"];
+    //self.bannerView.dataArray = @[@"1.jpg", @"2.jpg", @"3.jpg", @"4.jpg", @"5.jpg"];
     [self.bannerView reloadData];
     
     UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
