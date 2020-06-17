@@ -25,6 +25,6 @@
 /**
  每次给定数据数组后，都需要调用该方法加载或更新视图
  */
-- (void)reloadData;
+- (void)reloadBannerView;
 
 @end

@@ -74,14 +74,14 @@
 		E3CDC6B42303146900A3A71A /* SSAutoBannerView */ = {
 			isa = PBXGroup;
 			children = (
+				E3CDC6E12307C3BC00A3A71A /* Resources */,
+				E3CDC6EC2307C41200A3A71A /* SSAutoBannerView */,
 				E3CDC6B82303146900A3A71A /* AppDelegate.h */,
 				E3CDC6B92303146900A3A71A /* AppDelegate.m */,
 				E3CDC6BB2303146A00A3A71A /* ViewController.h */,
 				E3CDC6BC2303146A00A3A71A /* ViewController.m */,
 				E3CDC6DC2306E47D00A3A71A /* OneViewController.h */,
 				E3CDC6DD2306E47D00A3A71A /* OneViewController.m */,
-				E3CDC6E12307C3BC00A3A71A /* Resources */,
-				E3CDC6EC2307C41200A3A71A /* SSAutoBannerView */,
 				E3CDC6BE2303146A00A3A71A /* Main.storyboard */,
 				E3CDC6C12303146A00A3A71A /* Assets.xcassets */,
 				E3CDC6C32303146A00A3A71A /* LaunchScreen.storyboard */,
@@ -358,6 +358,7 @@
 				E3CDC6CB2303146A00A3A71A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

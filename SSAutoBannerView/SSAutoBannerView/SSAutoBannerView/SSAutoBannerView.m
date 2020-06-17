@@ -16,11 +16,11 @@
 
 @interface SSAutoBannerView () <UIScrollViewDelegate>
 
-@property(nonatomic, strong) NSTimer *timer; //定时滚动
-
-@property(nonatomic, strong) UIPageControl *pageControl; //页数控制器
+@property(nonatomic, strong) NSTimer *timer; //定时器滚动
 
 @property(nonatomic, strong) UIScrollView *scrollView;
+
+@property(nonatomic, strong) UIPageControl *pageControl; //页数控制器
 
 @property(nonatomic, strong) NSMutableArray *imgMutArray;//用于显示图片的数组
 
@@ -43,10 +43,20 @@
 
 #pragma mark - init
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self basicConfig];
+    }
+    return self;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
-    if (self = [super initWithFrame:frame]) {
-        [self loadViewBaseConfig];
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self basicConfig];
     }
     return self;
 }
@@ -59,7 +69,7 @@
 
 #pragma mark - 初始化设置
 
-- (void)loadViewBaseConfig
+- (void)basicConfig
 {
     self.backgroundColor = [UIColor whiteColor];
     self.clipsToBounds = YES;
@@ -68,7 +78,7 @@
 
 #pragma mark - 主要逻辑
 
-- (void)reloadData
+- (void)reloadBannerView
 {
     if (!self.dataArray || self.dataArray.count == 0) {
         return;
@@ -176,8 +186,8 @@
 
 - (void) stopTimer
 {
-    [self.timer invalidate];
-    self.timer = nil;
+    [_timer invalidate];
+    _timer = nil;
 }
 
 #pragma mark - lazy load
